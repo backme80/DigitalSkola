@@ -25,11 +25,15 @@ def question_1():
 	cursor = conn.cursor()
 	cursor.execute("SELECT NOW()")
 	result = cursor.fetchall()
+	cursor.close()
+	dbPool.putconn(conn)
 	print(result)
+
 	
 
 def main():
 	question_1()
+	dbPool.closeall()
 	return(0)
 
 print("run main")

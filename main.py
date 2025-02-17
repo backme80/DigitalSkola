@@ -10,13 +10,13 @@ load_dotenv()
 # Create a connection pool with a minimum of 2 connections and 
 # a maximum of 3 connections
 dbPool = psycopg2.pool.ThreadedConnectionPool(
-												os.getenv('DB_MINCONN'),
-												os.getenv('DB_MAXCONN'),
-												host=os.getenv('DB_HOST'),
-												database=os.getenv('DB_NAME'),
-												user=os.getenv('DB_USER'),
-												password=os.getenv('DB_PASS'),
-												port=os.getenv('DB_PORT'))
+	os.getenv('DB_MINCONN'),
+	os.getenv('DB_MAXCONN'),
+	host=os.getenv('DB_HOST'),
+	database=os.getenv('DB_NAME'),
+	user=os.getenv('DB_USER'),
+	password=os.getenv('DB_PASS'),
+	port=os.getenv('DB_PORT'))
 
 
 
